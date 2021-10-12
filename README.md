@@ -1,2 +1,2 @@
 # ml_tex
-cnn for ma
+cnn for malware
