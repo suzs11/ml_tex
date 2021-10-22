@@ -13,7 +13,7 @@ The one adjust parameter in the above algorithms is the threshold $R$ used in th
 The FNN algorithm is not robust to the presence of noise in the time-series.
 
 In order to solve this problem, a new threshold test can be used for time-series wherr significant noise corruption is expected. A logical form if this threshlod test based on the previous analysis is
-$$\frac{|y(k)-y(j)|}{||\Psi_{l.m}(k)-\Psi_{l.m}(j)||_2}\leq R + \frac{2R\sqrt{l\epsilon^{y^2}+m\epsilon^{u^2}}+2\varepsilon^y}{||\Psi_{l.m}(k)-\Psi_{l.m}(j)||_2}$$
+\[\frac{|y(k)-y(j)|}{||\Psi_{l.m}(k)-\Psi_{l.m}(j)||_2}\leq R + \frac{2R\sqrt{l\epsilon^{y^2}+m\epsilon^{u^2}}+2\varepsilon^y}{||\Psi_{l.m}(k)-\Psi_{l.m}(j)||_2}\]
 Notice that thsi threshold test has two distiinct limits. When the data are "dense", the second term on the right hand side will dominate. In this limit, the new threhold test simply determines whether the two neighbors outputs are within some specified noise-related distance $(2R\sqrt{l\epsilon^{y^2}+m\epsilon^{u^2}}+2\epsilon^y)$ of one another.
 
 ## Inferential measurement selection
