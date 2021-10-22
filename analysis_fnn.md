@@ -1,4 +1,4 @@
-#FNN: Determining the proper dimension
+# FNN: Determining the proper dimension
 For noise-free data, the number of false neighbors will drop to zero when the dimensioin of the regression vector is large enough to allow accurate prediction of future ouputs
 
 If the percentage of false neighbors is lagre, then the regressor vector must be extend to include more delayed input and/or output terms
