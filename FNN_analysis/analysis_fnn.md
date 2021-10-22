@@ -1,4 +1,4 @@
-# FNN: Determining the proper dimension
+[#](#) FNN: Determining the proper dimension
 For noise-free data, the number of false neighbors will drop to zero when the dimensioin of the regression vector is large enough to allow accurate prediction of future ouputs
 
 If the percentage of false neighbors is lagre, then the regressor vector must be extend to include more delayed input and/or output terms
@@ -19,3 +19,13 @@ Notice that thsi threshold test has two distiinct limits. When the data are "den
 ## Inferential measurement selection
 
 If the percentage of false nearest neighbors is large for all combinations of measurements in the given regression dimension $l$, the number of secondary measurements in the regressor vector should be increased.
+
+The basic trend we expect, and see, is that as the signal to noise ratio is lowered, the effective embedding dimension rises.
+
+After separating the signal from the cintamination, one can easily go back to the false-nearest-neighbor method to determine another(probably smaller) embedding dimension to use in analyzing the signal.
+
+We each use time-delay coordinates and attribute the disappearance of false neighbors as an indication of a minimum embedding dimension for the data.
+
+For large $T$, the proportion of false neighbors and also the $W$ statistic increase, because the attractor looks more like noise, as the elements of the state-space vector become more decorrelated due to the positive Lyapunov exponent. For sufficiently small time lats, the attractor eventually collapses onto a one-dimension will be spuriously low. The division by $T$ appears to be a way of ameliorating the latter problem, if one then ignores new minima in $W$ created at large $T$ by the division.
+
+In constrast to the case for embedding dimension, the theorems do not define a "correct" time dalay to use, rather one must choose a condition that simply gives reasonable results given a finite amount of data at a certain sampling rate, and the LPS criterion is another one to do so. Our method, as ti is attuned spcofically to the gross errors created by an imporper embedding, apears in parctice to be less sensitive to time delay than LPS'a method. This fact may be either a virtue or a vice, depending on one's outlook.
